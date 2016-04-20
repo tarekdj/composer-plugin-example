@@ -24,5 +24,6 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     {
         file_put_contents('/tmp/composer.log', __METHOD__ . "\n",FILE_APPEND);
         file_put_contents('/tmp/composer.log', get_class($event) . "\n",FILE_APPEND);            
+        file_put_contents('/tmp/composer.log', $event->getName() . "\n",FILE_APPEND);                    
     }
 }
